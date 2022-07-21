@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "description": "Descrição 1",
+      "additionalDescription": "Descrição adicional 1",
+      "model": "Modelo 1",
+      "price": "11111.11",
+      "discount": "11.11",
+      "weight": "11.111",
+      "packingWeight": "11.111",
+      "packingDimensions": "11x11x11",
+      "dimensions": "11x11x11",
+      "active": "true"
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "description": "Descrição 2",
+      "additionalDescription": "Descrição adicional 2",
+      "model": "Modelo 2",
+      "price": "11111.11",
+      "discount": "11.11",
+      "weight": "11.111",
+      "packingWeight": "11.111",
+      "packingDimensions": "11x11x11",
+      "dimensions": "11x11x11",
+      "active": "true"
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "description": "Descrição 3",
+      "additionalDescription": "Descrição adicional 3",
+      "model": "Modelo 3",
+      "price": "11111.11",
+      "discount": "11.11",
+      "weight": "11.111",
+      "packingWeight": "11.111",
+      "packingDimensions": "11x11x11",
+      "dimensions": "11x11x11",
+      "active": "true"
+    }
+  ]
+}

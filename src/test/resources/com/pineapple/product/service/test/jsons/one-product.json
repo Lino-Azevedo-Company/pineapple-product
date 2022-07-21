@@ -1,0 +1,14 @@
+{
+  "id": 1,
+  "name": "Product 1",
+  "description": "Descrição 1",
+  "additionalDescription": "Descrição adicional 1",
+  "model": "Modelo 1",
+  "price": "11111.11",
+  "discount": "11.11",
+  "weight": "11.111",
+  "packingWeight": "11.111",
+  "packingDimensions": "11x11x11",
+  "dimensions": "11x11x11",
+  "active": "true"
+}
