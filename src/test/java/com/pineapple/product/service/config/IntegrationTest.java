@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @ContextConfiguration(classes = {
-        JpaTestConfig.class
+        DatabaseTestConfig.class
 })
 public @interface IntegrationTest {
 }
