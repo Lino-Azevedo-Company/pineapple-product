@@ -6,9 +6,9 @@ CREATE TABLE pna_product (
     model           VARCHAR(200) NOT NULL,
     price           DECIMAL(10, 2) NOT NULL,
     discount        DECIMAL(10, 2),
-    weight          DECIMAL(5),
+    weight          DECIMAL(5,3),
     dimensions      VARCHAR(8),
-    packing_weight  DECIMAL(5),
+    packing_weight  DECIMAL(5,3),
     packing_dim     VARCHAR(8),
     active          BOOLEAN
 );

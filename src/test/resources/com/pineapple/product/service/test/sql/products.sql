@@ -17,8 +17,8 @@ INSERT INTO pna_product
 VALUES
 (
      'Product 1',
-     'Descrição 1',
-     'Descrição adicional 1',
+     'Descricao 1',
+     'Descricao adicional 1',
      'Modelo 1',
      11111.11,
      11.11,
@@ -48,8 +48,8 @@ INSERT INTO pna_product
 VALUES
 (
      'Product 2',
-     'Descrição 2',
-     'Descrição adicional 2',
+     'Descricao 2',
+     'Descricao adicional 2',
      'Modelo 2',
      11111.11,
      11.11,
@@ -79,8 +79,8 @@ INSERT INTO pna_product
 VALUES
 (
      'Product 3',
-     'Descrição 3',
-     'Descrição adicional 3',
+     'Descricao 3',
+     'Descricao adicional 3',
      'Modelo 1',
      11111.11,
      11.11,
