@@ -39,4 +39,39 @@ public class ProductControllerTest extends AbstractControllerTest {
         );
         assertThat(json.length(),equalTo(3));
     }
+
+    @Test
+    @Sql({
+            "/com/pineapple/product/service/test/sql/drop-database.sql",
+            "/com/pineapple/product/service/test/sql/create-database.sql"
+    })
+    @Sql(
+            "/com/pineapple/product/service/test/sql/products.sql"
+    )
+    void givenARequestToFindAProductByItsIdShouldReturn200AndTheRequestedProduct() throws Exception {
+        var result = getMockMvc()
+                .perform(get("/products/1"))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        JSONAssert.assertEquals(
+                jsonAsString("one-product.json"),
+                getResultAsJson(result),
+                true
+        );
+    }
+
+    @Test
+    @Sql({
+            "/com/pineapple/product/service/test/sql/drop-database.sql",
+            "/com/pineapple/product/service/test/sql/create-database.sql"
+    })
+    @Sql(
+            "/com/pineapple/product/service/test/sql/products.sql"
+    )
+    void givenARequestToFindAProductByItsIdAndIfDoesNotExistsShouldReturn404AndFuck0ff() throws Exception {
+        getMockMvc()
+            .perform(get("/products/4"))
+            .andExpect(status().is4xxClientError());
+    }
 }

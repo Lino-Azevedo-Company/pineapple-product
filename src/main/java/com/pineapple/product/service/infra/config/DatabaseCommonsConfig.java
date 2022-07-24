@@ -1,4 +1,4 @@
-package config;
+package com.pineapple.product.service.infra.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
