@@ -1,6 +1,7 @@
 package com.pineapple.product.service.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaDialect;
@@ -17,7 +18,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
-@ActiveProfiles("integration-tests")
+@Configuration
 @EnableJpaRepositories(basePackages = "com.pineapple.product.service.domain", enableDefaultTransactions = false)
 public class JpaTestConfig {
     @Bean
