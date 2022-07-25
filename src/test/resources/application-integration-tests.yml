@@ -1,0 +1,22 @@
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        password: password
+        url: jdbc:h2:mem:testdb
+        username: sa
+    h2:
+        console:
+            enabled: false
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        hibernate:
+            ddl-auto: verify
+        properties:
+            hibernate:
+                format_sql: true
+        show-sql: true
