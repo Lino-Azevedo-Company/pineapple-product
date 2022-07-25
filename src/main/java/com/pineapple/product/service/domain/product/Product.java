@@ -2,8 +2,7 @@ package com.pineapple.product.service.domain.product;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.pineapple.product.service.restapi.serialization.DecimalSerializer;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -12,6 +11,9 @@ import java.math.BigDecimal;
 @Table(name="pna_product")
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
     @Id
     @Column(name="product_id")
