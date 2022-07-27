@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 
 @Component
-public class ListWrapperDeserializer<T> extends AbstractJsonDeserializer<ListWrapper<?>> {
+public class ListWrapperDeserializer<T> extends AbstractDeserializer<ListWrapper<?>> {
 
     @Override
     public ListWrapper<T> deserialize(JsonNode node) throws IOException {
@@ -19,7 +19,7 @@ public class ListWrapperDeserializer<T> extends AbstractJsonDeserializer<ListWra
 
     public <T> ListWrapper<T> deserialize(JsonNode node, final Class<T> tClass) throws IOException {
         try {
-            var deserializer = (AbstractJsonDeserializer<T>) getDeserializer(tClass);
+            var deserializer = (AbstractDeserializer<T>) getDeserializer(tClass);
             var items = new LinkedList<T>();
             if (node != null) {
                 for (var nodeObject : node) {

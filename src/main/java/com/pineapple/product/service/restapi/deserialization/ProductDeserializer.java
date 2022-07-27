@@ -10,7 +10,7 @@ import java.io.IOException;
 import static com.pineapple.product.service.restapi.serialization.SerializationLabels.*;
 
 @Component
-public class ProductDeserializer extends AbstractJsonDeserializer<ProductWrapper> {
+public class ProductDeserializer extends AbstractDeserializer<ProductWrapper> {
 
     @Override
     public ProductWrapper deserialize(JsonNode node) throws IOException {

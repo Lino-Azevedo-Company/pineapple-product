@@ -8,7 +8,7 @@ import java.io.IOException;
 import static com.pineapple.product.service.restapi.serialization.SerializationLabels.*;
 
 @Component
-public class ProductSerializer extends AbstractJsonSerializer<ProductWrapper> {
+public class ProductSerializer extends AbstractSerializer<ProductWrapper> {
 
     @Override
     public void serialize(ProductWrapper productWrapper, Enum<?> fieldName, JsonBuilder builder) throws IOException {

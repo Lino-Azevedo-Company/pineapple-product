@@ -1,6 +1,7 @@
 package com.pineapple.product.service.restapi.serialization;
 
 import com.pineapple.product.service.restapi.wrapper.ListWrapper;
+import com.pineapple.serialization.JsonBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -8,7 +9,7 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class ListWrapperSerializer<T> extends AbstractJsonSerializer<ListWrapper<T>> {
+public class ListWrapperSerializer<T> extends AbstractSerializer<ListWrapper<T>> {
 
     @Override
     public void serialize(ListWrapper<T> value, Enum<?> fieldName, JsonBuilder builder) throws IOException {
@@ -27,7 +28,7 @@ public class ListWrapperSerializer<T> extends AbstractJsonSerializer<ListWrapper
 
     private void writeValues(List<T> value, JsonBuilder builder) throws IOException {
         for (final T item : value) {
-            final AbstractJsonSerializer<T> serializer = (AbstractJsonSerializer<T>) getSerializer(item.getClass());
+            final AbstractSerializer<T> serializer = (AbstractSerializer<T>) getSerializer(item.getClass());
             serializer.serialize(item, builder);
         }
     }
