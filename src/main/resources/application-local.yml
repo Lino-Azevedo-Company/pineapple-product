@@ -1,0 +1,19 @@
+spring:
+    datasource:
+        driverClassName: org.postgresql.Driver
+        password: pna
+        url: jdbc:postgresql://192.168.1.9:5432/pna
+        username: pna
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    jpa:
+        database-platform: org.hibernate.dialect.PostgresSQLDialect
+        hibernate:
+            ddl-auto: verify
+        properties:
+            hibernate:
+                format_sql: false
+        show-sql: false

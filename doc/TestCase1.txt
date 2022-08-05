@@ -1,0 +1,11 @@
+Objetivo: Visualização dos produtos
+1 - Mostrar todos os produtos
+    GET products/
+2 - Mostrar um produto (pelo menos)
+    GET products/{id}
+3 - Cadastrar um produto
+    POST products/
+4 - Atualizar um produto
+    PUT products/{id}
+5 - Desativar um produto
+    PUT products/{id}
