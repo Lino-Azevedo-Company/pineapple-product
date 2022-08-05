@@ -3,6 +3,7 @@ package com.pineapple.product.service.restapi.deserialization;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.pineapple.product.service.domain.product.Product;
 import com.pineapple.product.service.restapi.wrapper.ProductWrapper;
+import com.pineapple.commons.serialization.deserialize.AbstractJsonDeserializer;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.io.IOException;
 import static com.pineapple.product.service.restapi.serialization.SerializationLabels.*;
 
 @Component
-public class ProductDeserializer extends AbstractDeserializer<ProductWrapper> {
+public class ProductDeserializer extends AbstractJsonDeserializer<ProductWrapper> {
 
     @Override
     public ProductWrapper deserialize(JsonNode node) throws IOException {

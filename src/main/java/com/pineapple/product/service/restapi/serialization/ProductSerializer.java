@@ -1,6 +1,8 @@
 package com.pineapple.product.service.restapi.serialization;
 
 import com.pineapple.product.service.restapi.wrapper.ProductWrapper;
+import com.pineapple.commons.serialization.serialize.AbstractJsonSerializer;
+import com.pineapple.commons.serialization.JsonBuilder;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -8,7 +10,7 @@ import java.io.IOException;
 import static com.pineapple.product.service.restapi.serialization.SerializationLabels.*;
 
 @Component
-public class ProductSerializer extends AbstractSerializer<ProductWrapper> {
+public class ProductSerializer extends AbstractJsonSerializer<ProductWrapper> {
 
     @Override
     public void serialize(ProductWrapper productWrapper, Enum<?> fieldName, JsonBuilder builder) throws IOException {
